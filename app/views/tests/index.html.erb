@@ -1,0 +1,7 @@
+<h1>Test#index</h1>
+<p>Find me in app/views/test/index.html.erb</p>
+
+
+<%= tests_path(params.permit!.except(:action, :controller, :id).merge(location_id: 10, format: 'pdf')) %>
+<br/><br/>
+<%= tests_path(params.permit!.to_hash.except(:action, :controller, :id).merge(location_id: 10, format: 'pdf')) %>
